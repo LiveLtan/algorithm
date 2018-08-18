@@ -1,28 +1,52 @@
 package com.ltan.algorithm.session;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.HashMap;
 
+/**
+ * From Leetcode 1
+ *
+ * Given an array of integers, find out two numbers such that they add up
+ * to a specific target number.
+ *
+ * The function twoSum should return indices of the two numbers such that
+ * add up to the target, where index1 must be less than index2, Please note
+ * that your returned answer (both index1 and index2) are not zero-based.
+ *
+ * You may assume that each input would have exactly one solution.
+ *
+ * Input: numbers={2, 7, 11, 15}, target=9
+ * Output: index1=1, index2=2
+ *
+ * Tags: Array, HashTable
+ */
 public class Number {
+
     public static void main(String[] args) {
         System.out.println("please in put an array");
         //int[] arrays = new int[] {2, 7, 11, 5};
         int[] arrays = new int[] {2, 7, 11, 5, 20};
         int[] result;
         Number numberTest = new Number();
-        numberTest.getIndex(arrays, 9);
-        numberTest.getIndex(arrays, 16);
-        numberTest.getIndex(arrays, 12);
-        numberTest.getIndex(arrays, 20);
+        numberTest.twoSum(arrays, 9);
+        numberTest.twoSum(arrays, 16);
+        numberTest.twoSum(arrays, 12);
+        numberTest.twoSum(arrays, 20);
 
-        result = numberTest.getIndex2(arrays, 9);
-        result = numberTest.getIndex2(arrays, 16);
-        result = numberTest.getIndex2(arrays, 12);
+        result = numberTest.twoSum2(arrays, 9);
+        result = numberTest.twoSum2(arrays, 16);
+        result = numberTest.twoSum2(arrays, 12);
         printArray(result);
     }
 
-    private int[] getIndex(int[] targetArrays, int targetNumber) {
+    /**
+     * get the two sub numbers' index
+     * O(n^2) complexity
+     *
+     * @param targetArrays data array
+     * @param targetNumber target number
+     * @return index array, contains two index or NULL if not found.
+     */
+    private int[] twoSum(int[] targetArrays, int targetNumber) {
         if(targetArrays == null || targetArrays.length == 0) {
             return null;
         }
@@ -36,7 +60,15 @@ public class Number {
         return null;
     }
 
-    private int[] getIndex2(int[] targetArrays, int targetNumber) {
+    /**
+     * get the two sub numbers' index
+     * O(n) space, O(n) complexity
+     *
+     * @param targetArrays data array
+     * @param targetNumber target number
+     * @return index array, contains two index or NULL if not found.
+     */
+    private int[] twoSum2(int[] targetArrays, int targetNumber) {
         if(targetArrays == null || targetArrays.length == 0) {
             return null;
         }
@@ -54,11 +86,13 @@ public class Number {
         return null;
     }
 
-    @NotNull
-    private static void printArray( int[] array) {
+    /**
+     * print the all members, like "[,,,]"
+     * @param array target array
+     */
+    private static void printArray(int[] array) {
         System.out.print("[");
         for(int i = 0; i < array.length; i++) {
-            //System.out.println("index1=" + result[0] + ", index2=" + result[1]);
             System.out.print(i == array.length - 1 ? array[i] : array[i] + ", ");
         }
         System.out.println("]");
