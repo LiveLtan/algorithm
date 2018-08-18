@@ -19,22 +19,22 @@ import java.util.HashMap;
  *
  * Tags: Array, HashTable
  */
-public class Number {
+public class AlgorithmTwoSum {
 
     public static void main(String[] args) {
         System.out.println("please in put an array");
         //int[] arrays = new int[] {2, 7, 11, 5};
         int[] arrays = new int[] {2, 7, 11, 5, 20};
         int[] result;
-        Number numberTest = new Number();
-        numberTest.twoSum(arrays, 9);
-        numberTest.twoSum(arrays, 16);
-        numberTest.twoSum(arrays, 12);
-        numberTest.twoSum(arrays, 20);
+        AlgorithmTwoSum twoSumTest = new AlgorithmTwoSum();
+        twoSumTest.twoSum(arrays, 9);
+        twoSumTest.twoSum(arrays, 16);
+        twoSumTest.twoSum(arrays, 12);
+        twoSumTest.twoSum(arrays, 20);
 
-        result = numberTest.twoSum2(arrays, 9);
-        result = numberTest.twoSum2(arrays, 16);
-        result = numberTest.twoSum2(arrays, 12);
+        result = twoSumTest.twoSum2(arrays, 9);
+        result = twoSumTest.twoSum2(arrays, 16);
+        result = twoSumTest.twoSum2(arrays, 12);
         printArray(result);
     }
 
