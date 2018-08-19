@@ -2,6 +2,7 @@ package com.ltan.algorithm.session;
 //
 /**
  * From Leetcode 283
+ * similar problems number: 27 26
  *
  * Given an nums numbers, write a function to move all 0's to the end of
  * it while maintaining the relative order of the non-zero elements.
@@ -14,7 +15,7 @@ package com.ltan.algorithm.session;
 public class AlgorithmMoveZeros {
 
     public void moveZeros(int[] nums) {
-        if(emptyArray(nums)) {
+        if(Utils.emptyArray(nums)) {
             return;
         }
         // indicate the current zero index
@@ -34,7 +35,7 @@ public class AlgorithmMoveZeros {
      * @param nums target integer array
      */
     public void moveZeros2(int[] nums) {
-        if(emptyArray(nums)) {
+        if(Utils.emptyArray(nums)) {
             return;
         }
         int flag = 0;
@@ -60,7 +61,7 @@ public class AlgorithmMoveZeros {
      * @param nums target integer array
      */
     public void moveZeros3(int[] nums) {
-        if(emptyArray(nums)) {
+        if(Utils.emptyArray(nums)) {
             return;
         }
         // indicate the current zero index
@@ -96,7 +97,4 @@ public class AlgorithmMoveZeros {
         nums[index2] = tmp;
     }
 
-    private boolean emptyArray(int[] nums) {
-        return (nums == null || nums.length == 0);
-    }
 }

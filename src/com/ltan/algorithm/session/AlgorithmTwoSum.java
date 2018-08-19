@@ -30,7 +30,7 @@ public class AlgorithmTwoSum {
      * @return index array, contains two index or NULL if not found.
      */
     public int[] twoSum(int[] targetArrays, int targetNumber) {
-        if(targetArrays == null || targetArrays.length == 0) {
+        if(Utils.emptyArray(targetArrays)) {
             return null;
         }
         for(int i = 0; i < targetArrays.length - 1; i++) {
@@ -52,7 +52,7 @@ public class AlgorithmTwoSum {
      * @return index array, contains two index or NULL if not found.
      */
     public int[] twoSum2(int[] targetArrays, int targetNumber) {
-        if(targetArrays == null || targetArrays.length == 0) {
+        if(Utils.emptyArray(targetArrays)) {
             return null;
         }
         HashMap<Integer, Integer> arraysMap = new HashMap<>(targetArrays.length);

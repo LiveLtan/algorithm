@@ -3,8 +3,9 @@ package com.ltan.algorithm.session;
 public class Main {
 
     public static void main(String[] args) {
-        //testTwoSum();
-        testMoveZeros();
+        //testTwoSum();/* leetcode 1 */
+        //testMoveZeros(); /* leetcode 283 */
+        testRemoveElements(); /* leetcode 27 */
     }
 
     private static void testTwoSum() {
@@ -44,15 +45,30 @@ public class Main {
         printArray(array3);
     }
 
+    private static void testRemoveElements() {
+        AlgorithmRemoveElement removeElement = new AlgorithmRemoveElement();
+
+        int[] nums = Utils.generateArrayByString("[3,2,2,3]");
+        int elementLeftNum = removeElement.removeElement(nums, 2);
+        Utils.printArray(nums, elementLeftNum);
+
+        nums = Utils.generateArrayByString("[3,2,2,3,4,]");
+        elementLeftNum = removeElement.removeElement(nums, 3);
+        Utils.printArray(nums, elementLeftNum);
+
+        nums = Utils.generateArrayByString("[0,1,2,2,3,0,4,2]");
+        elementLeftNum = removeElement.removeElement(nums, 2);
+        Utils.printArray(nums, elementLeftNum);
+
+        nums = Utils.generateArrayByString("[0,1,2,2,3,0,4,2,100]");
+        elementLeftNum = removeElement.removeElement(nums, 0);
+        Utils.printArray(nums, elementLeftNum);
+    }
     /**
      * print the all members, like "[,,,]"
      * @param array target array
      */
     public static void printArray(int[] array) {
-        System.out.print("[");
-        for(int i = 0; i < array.length; i++) {
-            System.out.print(i == array.length - 1 ? array[i] : array[i] + ", ");
-        }
-        System.out.println("]");
+        Utils.printArray(array);
     }
 }
