@@ -21,23 +21,6 @@ import java.util.HashMap;
  */
 public class AlgorithmTwoSum {
 
-    public static void main(String[] args) {
-        System.out.println("please in put an array");
-        //int[] arrays = new int[] {2, 7, 11, 5};
-        int[] arrays = new int[] {2, 7, 11, 5, 20};
-        int[] result;
-        AlgorithmTwoSum twoSumTest = new AlgorithmTwoSum();
-        twoSumTest.twoSum(arrays, 9);
-        twoSumTest.twoSum(arrays, 16);
-        twoSumTest.twoSum(arrays, 12);
-        twoSumTest.twoSum(arrays, 20);
-
-        result = twoSumTest.twoSum2(arrays, 9);
-        result = twoSumTest.twoSum2(arrays, 16);
-        result = twoSumTest.twoSum2(arrays, 12);
-        printArray(result);
-    }
-
     /**
      * get the two sub numbers' index
      * O(n^2) complexity
@@ -46,7 +29,7 @@ public class AlgorithmTwoSum {
      * @param targetNumber target number
      * @return index array, contains two index or NULL if not found.
      */
-    private int[] twoSum(int[] targetArrays, int targetNumber) {
+    public int[] twoSum(int[] targetArrays, int targetNumber) {
         if(targetArrays == null || targetArrays.length == 0) {
             return null;
         }
@@ -68,7 +51,7 @@ public class AlgorithmTwoSum {
      * @param targetNumber target number
      * @return index array, contains two index or NULL if not found.
      */
-    private int[] twoSum2(int[] targetArrays, int targetNumber) {
+    public int[] twoSum2(int[] targetArrays, int targetNumber) {
         if(targetArrays == null || targetArrays.length == 0) {
             return null;
         }
@@ -84,17 +67,5 @@ public class AlgorithmTwoSum {
             }
         }
         return null;
-    }
-
-    /**
-     * print the all members, like "[,,,]"
-     * @param array target array
-     */
-    private static void printArray(int[] array) {
-        System.out.print("[");
-        for(int i = 0; i < array.length; i++) {
-            System.out.print(i == array.length - 1 ? array[i] : array[i] + ", ");
-        }
-        System.out.println("]");
     }
 }
