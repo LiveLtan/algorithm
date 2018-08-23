@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         //testTwoSum();/* leetcode 1 */
         //testMoveZeros(); /* leetcode 283 */
-        testRemoveElements(); /* leetcode 27 */
+        //testRemoveElements(); /* leetcode 27 */
+        testBullsCrows(); /* leetcode 299 */
     }
 
     private static void testTwoSum() {
@@ -63,6 +64,22 @@ public class Main {
         nums = Utils.generateArrayByString("[0,1,2,2,3,0,4,2,100]");
         elementLeftNum = removeElement.removeElement(nums, 0);
         Utils.printArray(nums, elementLeftNum);
+    }
+
+    private static void testBullsCrows() {
+        AlgorithmBullsCrows bullsCrows = new AlgorithmBullsCrows();
+        //final String sec = "1807", guess = "7810";
+        //final String sec = "1123", guess = "0111";
+        //final String sec = "1123", guess = "1111";
+        //final String sec = "1023", guess = "1111";
+        //final String sec = "1101", guess = "0110";
+        // be careful
+        final String sec = "1122", guess = "1222";
+
+        String result = bullsCrows.getHint(sec, guess);
+        //result = bullsCrows.getHint2(sec, guess);
+        //result = bullsCrows.getHint3(sec, guess);
+        System.out.println("testBullsCrows:\n" + result);
     }
     /**
      * print the all members, like "[,,,]"
