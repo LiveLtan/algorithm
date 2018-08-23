@@ -1,4 +1,7 @@
-package com.ltan.algorithm.session;
+package com.ltan.algorithm;
+
+import com.ltan.algorithm.session.*;
+import com.ltan.algorithm.utils.Utils;
 
 public class Main {
 
