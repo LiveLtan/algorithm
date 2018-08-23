@@ -17,7 +17,7 @@ import java.util.HashMap;
  * the bulls and B to indicate the cows.
  * <p>
  * Please note that both secret number and friend's guess may contain duplicate digits.
- * <p/>
+ *
  * <p>
  * Example:
  * Input: secret = "1807", guess = "7810"
