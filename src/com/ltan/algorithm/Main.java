@@ -1,5 +1,6 @@
 package com.ltan.algorithm;
 
+import com.ltan.algorithm.practice.AlgorithmSortByInsert;
 import com.ltan.algorithm.session.*;
 import com.ltan.algorithm.utils.Utils;
 
@@ -9,7 +10,8 @@ public class Main {
         //testTwoSum();/* leetcode 1 */
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
-        testBullsCrows(); /* leetcode 299 */
+        //testBullsCrows(); /* leetcode 299 */
+        testInsertSort();
     }
 
     private static void testTwoSum() {
@@ -83,6 +85,13 @@ public class Main {
         //result = bullsCrows.getHint2(sec, guess);
         //result = bullsCrows.getHint3(sec, guess);
         System.out.println("testBullsCrows:\n" + result);
+    }
+
+    private static void testInsertSort() {
+        int[] arrays = new int[] {2, 7, 11, 3, 5, 1, 4, 16, 13, 3, 12, 6, 9, 20};
+        AlgorithmSortByInsert algorithmSortByInsert = new AlgorithmSortByInsert();
+        algorithmSortByInsert.sort(arrays);
+        printArray(arrays);
     }
     /**
      * print the all members, like "[,,,]"
