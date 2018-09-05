@@ -39,6 +39,15 @@ public class Utils {
         System.out.println("]");
     }
 
+    public static void printArray(int[] array, int startIndex, int endIndex) {
+        System.out.print("[");
+        for(int i = startIndex; i < array.length && i < endIndex; i++) {
+            System.out.print((i == array.length - 1 || i== endIndex - 1)
+                    ? array[i] : array[i] + ", ");
+        }
+        System.out.println("]");
+    }
+
     /**
      * If swipe, call this, java do not have swap API
      * @param nums target nums
