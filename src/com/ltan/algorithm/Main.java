@@ -1,6 +1,7 @@
 package com.ltan.algorithm;
 
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
+import com.ltan.algorithm.practice.AlgorithmSelectionSort;
 import com.ltan.algorithm.practice.AlgorithmSortByInsert;
 import com.ltan.algorithm.session.*;
 import com.ltan.algorithm.utils.Utils;
@@ -15,7 +16,8 @@ public class Main {
 
         // test
         //testInsertSort();
-        testQuickSort();
+        //testQuickSort();
+        testSelectionSort();
     }
 
     private static void testTwoSum() {
@@ -108,6 +110,14 @@ public class Main {
         printArray(arrays);
     }
 
+
+    private static void testSelectionSort() {
+        int[] arrays = new int[] {2, 7, 11, 3, 5, 1, 4, 16, 13, 3, 12, 6, 9, 20};
+        AlgorithmSelectionSort algorithmSelectionSort = new AlgorithmSelectionSort();
+        //algorithmSelectionSort.sort(arrays);
+        algorithmSelectionSort.sort2(arrays);
+        printArray(arrays);
+    }
     /**
      * print the all members, like "[,,,]"
      * @param array target array
