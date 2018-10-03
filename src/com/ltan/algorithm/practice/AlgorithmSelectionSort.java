@@ -4,7 +4,7 @@ package com.ltan.algorithm.practice;
  * Detail:
  * basic sort algorithm Select Sort..
  * <p>
- * Added by ltan on 2018/9/6
+ * Added by ltan on 2018/10/3
  */
 public class AlgorithmSelectionSort {
 
