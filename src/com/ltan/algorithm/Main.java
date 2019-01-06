@@ -1,6 +1,8 @@
 package com.ltan.algorithm;
 
 import com.ltan.algorithm.leetcode.*;
+import com.ltan.algorithm.leetcode.easy.AlgorithmTwoSum;
+import com.ltan.algorithm.leetcode.easy.ReverseInteger;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -11,7 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
         //testTwoSum();/* leetcode 1 */
-        AddTwoNumbers.run(); /* leetcode 2 */
+        //AlgorithmTwoSum.run();/* leetcode 1 version 2 */
+        //AddTwoNumbers.run(); /* leetcode 2 */
+        ReverseInteger.run(); /* leetcode 7 */
+
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
         //testBullsCrows(); /* leetcode 299 */
@@ -20,7 +25,7 @@ public class Main {
         //testInsertSort();
         //testQuickSort();
         //testSelectionSort();
-        testBubbleSort();
+        //testBubbleSort();
     }
 
     private static void testTwoSum() {

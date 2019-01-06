@@ -1,16 +1,4 @@
-package com.ltan.algorithm.leetcode;
-
-/**
- * Definition for singly-linked list.
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
+package com.ltan.algorithm.leetcode.easy;
 
 /**
  * Detail: From Leetcode 2
@@ -36,76 +24,87 @@ class ListNode {
  *
  * Added by ltan on 2018/8/19
  */
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode result = new ListNode(0);
-        //ListNode result = new ListNode(0);
-        ListNode l3 = result;
-        int carry = 0;
-        while (l1 != null && l2 != null) {
-            l3.val = l1.val + l2.val + carry;
-            carry = calculateCarry(l3);
-
-            l1 = l1.next;
-            l2 = l2.next;
-            if ((l1 != null || l2 != null) || carry > 0) {
-                l3.next = new ListNode(carry);
-            }
-            l3 = l3.next;
-        }
-        handleExtra(l3, l1);
-        handleExtra(l3, l2);
-        return result;
-    }
-
+public class AddTwoNumbers {
     /**
-     * handle the bigger listnode
-     *
-     * @param l3   source list
-     * @param list the left list which length is great than other listnode
+     * Definition for singly-linked list.
      */
-    private void handleExtra(ListNode l3, ListNode list) {
-        if (l3 == null || list == null) {
-            return;
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
         }
-        int carry = 0;
-        if (list.val > 0 || list.next != null) {
-            l3.val += list.val;
-            l3.next = list.next;
-            while (l3 != null) {
+    }
+    static class Solution {
+        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+            ListNode result = new ListNode(0);
+            //ListNode result = new ListNode(0);
+            ListNode l3 = result;
+            int carry = 0;
+            while (l1 != null && l2 != null) {
+                l3.val = l1.val + l2.val + carry;
                 carry = calculateCarry(l3);
-                if (carry <= 0) {
-                    break; // means no carry, just append list into source list l3.
-                } else if (l3.next != null) {
-                    l3.next.val += carry;
-                } else {
+
+                l1 = l1.next;
+                l2 = l2.next;
+                if ((l1 != null || l2 != null) || carry > 0) {
                     l3.next = new ListNode(carry);
                 }
                 l3 = l3.next;
             }
+            handleExtra(l3, l1);
+            handleExtra(l3, l2);
+            return result;
+        }
+
+        /**
+         * handle the bigger listnode
+         *
+         * @param l3   source list
+         * @param list the left list which length is great than other listnode
+         */
+        private void handleExtra(ListNode l3, ListNode list) {
+            if (l3 == null || list == null) {
+                return;
+            }
+            int carry = 0;
+            if (list.val > 0 || list.next != null) {
+                l3.val += list.val;
+                l3.next = list.next;
+                while (l3 != null) {
+                    carry = calculateCarry(l3);
+                    if (carry <= 0) {
+                        break; // means no carry, just append list into source list l3.
+                    } else if (l3.next != null) {
+                        l3.next.val += carry;
+                    } else {
+                        l3.next = new ListNode(carry);
+                    }
+                    l3 = l3.next;
+                }
+            }
+        }
+
+        /**
+         * calculate the current node carray
+         *
+         * @param node list node
+         * @return carry
+         */
+        private int calculateCarry(ListNode node) {
+            if (node == null) {
+                return 0;
+            }
+            int carry = 0;
+            if (node.val >= 10) {
+                carry = node.val / 10;
+                node.val = node.val % 10;
+            }
+            return carry;
         }
     }
 
-    /**
-     * calculate the current node carray
-     *
-     * @param node list node
-     * @return carry
-     */
-    private int calculateCarry(ListNode node) {
-        if (node == null) {
-            return 0;
-        }
-        int carry = 0;
-        if (node.val >= 10) {
-            carry = node.val / 10;
-            node.val = node.val % 10;
-        }
-        return carry;
-    }
-}
-
-public class AddTwoNumbers {
     public static void run() {
         Solution solution = new Solution();
         ListNode l1 = new ListNode(0);
