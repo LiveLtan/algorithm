@@ -1,4 +1,4 @@
-package com.ltan.algorithm.session;
+package com.ltan.algorithm.leetcode;
 //
 
 import com.ltan.algorithm.utils.Utils;

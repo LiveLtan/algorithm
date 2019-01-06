@@ -1,15 +1,26 @@
 package com.ltan.algorithm;
 
-import com.ltan.algorithm.session.*;
+import com.ltan.algorithm.leetcode.*;
+import com.ltan.algorithm.practice.AlgorithmBubbleSort;
+import com.ltan.algorithm.practice.AlgorithmQuickSort;
+import com.ltan.algorithm.practice.AlgorithmSelectionSort;
+import com.ltan.algorithm.practice.AlgorithmSortByInsert;
 import com.ltan.algorithm.utils.Utils;
 
 public class Main {
 
     public static void main(String[] args) {
         //testTwoSum();/* leetcode 1 */
+        AddTwoNumbers.run(); /* leetcode 2 */
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
-        testBullsCrows(); /* leetcode 299 */
+        //testBullsCrows(); /* leetcode 299 */
+
+        // test
+        //testInsertSort();
+        //testQuickSort();
+        //testSelectionSort();
+        testBubbleSort();
     }
 
     private static void testTwoSum() {
@@ -84,6 +95,39 @@ public class Main {
         //result = bullsCrows.getHint3(sec, guess);
         System.out.println("testBullsCrows:\n" + result);
     }
+
+    private static void testInsertSort() {
+        int[] arrays = new int[] {2, 7, 11, 3, 5, 1, 4, 16, 13, 3, 12, 6, 9, 20};
+        AlgorithmSortByInsert algorithmSortByInsert = new AlgorithmSortByInsert();
+        algorithmSortByInsert.sort(arrays);
+        printArray(arrays);
+    }
+
+    private static void testQuickSort() {
+        //int[] arrays = new int[] {3, 7, 11, 2, 5, 1, 4/*, 16, 13, 3, 12, 6, 9, 20*/};
+        int[] arrays = new int[] {1, 2, 3, 4, 16, 13, 3, 12, 6, 9, 20};
+        //int[] arrays = new int[] {1, 2, 3, 4, 16, 13};
+        AlgorithmQuickSort algorithmSortByInsert = new AlgorithmQuickSort();
+        printArray(arrays);
+        algorithmSortByInsert.quickSort(arrays, 0 , arrays.length - 1);
+        printArray(arrays);
+    }
+
+    private static void testSelectionSort() {
+        int[] arrays = new int[] {2, 7, 11, 3, 5, 1, 4, 16, 13, 3, 12, 6, 9, 20};
+        AlgorithmSelectionSort algorithmSelectionSort = new AlgorithmSelectionSort();
+        //algorithmSelectionSort.sort(arrays);
+        algorithmSelectionSort.sort2(arrays);
+        printArray(arrays);
+    }
+
+    private static void testBubbleSort() {
+        int[] arrays = new int[] {2, 7, 11, 3, 5, 1, 4, 16, 13, 3, 12, 6, 9, 20};
+        AlgorithmBubbleSort algorithmBubbleSort = new AlgorithmBubbleSort();
+        algorithmBubbleSort.sort(arrays);
+        printArray(arrays);
+    }
+
     /**
      * print the all members, like "[,,,]"
      * @param array target array
