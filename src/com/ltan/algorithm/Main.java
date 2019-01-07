@@ -3,6 +3,7 @@ package com.ltan.algorithm;
 import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.AlgorithmTwoSum;
 import com.ltan.algorithm.leetcode.easy.ReverseInteger;
+import com.ltan.algorithm.leetcode.easy.PalindromeInteger;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -16,6 +17,7 @@ public class Main {
         //AlgorithmTwoSum.run();/* leetcode 1 version 2 */
         //AddTwoNumbers.run(); /* leetcode 2 */
         ReverseInteger.run(); /* leetcode 7 */
+        PalindromeInteger.run(); /* leetcode 9 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
