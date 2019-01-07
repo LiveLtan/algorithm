@@ -9,34 +9,16 @@ public class ReverseInteger {
          * @return the reversed number
          */
         public int reverse(int x) {
-            StringBuilder sb = new StringBuilder();
-
-            final int y = x;
-            if(x < Integer.MIN_VALUE + 1) {
-                x = Integer.MIN_VALUE + 1;
-            }
-            if(x < 0) {
-                x = -x;
-            }
-            while (x > 0) {
+            long result = 0;
+            while (x != 0) {
                 int g = x % 10;
                 x /= 10;
-                sb.append(g);
+                result = result * 10 + g;
+                if(result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+                    return 0;
+                }
             }
-            while(sb.length() > 1 && sb.charAt(0) == '0') {
-                sb.deleteCharAt(0);
-            }
-            if(y < 0 && sb.length() > 0) {
-                int f = sb.charAt(0) - '0';
-                sb.deleteCharAt(0);
-                sb.insert(0, -f);
-            }
-            String result = sb.toString();
-            if(result.length() == 0 || (y > 0 && Long.valueOf(result) > Integer.MAX_VALUE) ||
-                    (y < 0 && Long.valueOf(result) < Integer.MIN_VALUE)) {
-                return 0;
-            }
-            return Integer.parseInt(result);
+            return (int)result;
         }
     }
 
