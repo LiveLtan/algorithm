@@ -28,12 +28,33 @@ import java.util.ArrayList;
  */
 public class PalindromeInteger {
     static class Solution {
+
         /**
          * optimise for {@link #isPalindrome2(int)}
          *
          * @return true if if palindrome number
          */
         public boolean isPalindrome(int x) {
+            if (x < 0 || (x % 10 == 0 && x != 0)) {
+                return false;
+            }
+            if (x == 0) {
+                return true;
+            }
+            int revert = 0;
+            while (x > revert) {
+                revert = revert * 10 + x % 10;
+                x /= 10;
+            }
+            return x == revert || x == revert / 10;
+        }
+
+        /**
+         * optimise for {@link #isPalindrome3(int)}
+         *
+         * @return true if if palindrome number
+         */
+        public boolean isPalindrome2(int x) {
             if (x < 0) {
                 return false;
             }
@@ -55,35 +76,35 @@ public class PalindromeInteger {
             }
             return true;
         }
-    }
 
-    /**
-     * judge whether the x is palindrome or not.
-     *
-     * @param x input number
-     * @return true if if palindrome number
-     */
-    public boolean isPalindrome2(int x) {
-        if (x < 0) {
-            return false;
-        }
-        if (x == 0) {
+        /**
+         * judge whether the x is palindrome or not.
+         *
+         * @param x input number
+         * @return true if if palindrome number
+         */
+        public boolean isPalindrome3(int x) {
+            if (x < 0) {
+                return false;
+            }
+            if (x == 0) {
+                return true;
+            }
+            // use int array list
+            ArrayList<Integer> numbers = new ArrayList<>();
+            while (x != 0) {
+                numbers.add(x % 10);
+                x /= 10;
+            }
+            int count = numbers.size();
+            for (int i = 0; i <= count / 2; i++) {
+                if (numbers.get(i).equals(numbers.get(count - i - 1))) {
+                    continue;
+                }
+                return false;
+            }
             return true;
         }
-        // use int array list
-        ArrayList<Integer> numbers = new ArrayList<>();
-        while (x != 0) {
-            numbers.add(x % 10);
-            x /= 10;
-        }
-        int count = numbers.size();
-        for (int i = 0; i <= count / 2; i++) {
-            if (numbers.get(i).equals(numbers.get(count - i - 1))) {
-                continue;
-            }
-            return false;
-        }
-        return true;
     }
 
     public static void run() {
@@ -91,5 +112,6 @@ public class PalindromeInteger {
         System.out.println(new Solution().isPalindrome(1));
         System.out.println(new Solution().isPalindrome(11));
         System.out.println(new Solution().isPalindrome(10101));
+        System.out.println(new Solution().isPalindrome(102301));
     }
 }

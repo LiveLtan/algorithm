@@ -4,6 +4,7 @@ import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.AlgorithmTwoSum;
 import com.ltan.algorithm.leetcode.easy.ReverseInteger;
 import com.ltan.algorithm.leetcode.easy.PalindromeInteger;
+import com.ltan.algorithm.leetcode.easy.RomanToInteger;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -18,6 +19,7 @@ public class Main {
         //AddTwoNumbers.run(); /* leetcode 2 */
         ReverseInteger.run(); /* leetcode 7 */
         PalindromeInteger.run(); /* leetcode 9 */
+        RomanToInteger.run(); /* leetcode 13 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
