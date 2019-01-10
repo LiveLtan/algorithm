@@ -17,7 +17,8 @@ public class Main {
         //ReverseInteger.run(); /* leetcode 7 */
         //PalindromeInteger.run(); /* leetcode 9 */
         //RomanToInteger.run(); /* leetcode 13 */
-        LongestCommonPrefix.run(); /* leetcode 14 */
+        //LongestCommonPrefix.run(); /* leetcode 14 */
+        ParenthesesValid.run(); /* leetcode 20 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
