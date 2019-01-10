@@ -21,35 +21,37 @@ package com.ltan.algorithm.leetcode.easy;
  */
 public class LongestCommonPrefix {
     private static class Solution {
-    public String longestCommonPrefix(String[] strs) {
-        if(strs == null || strs.length == 0) {
-            return "";
-        } else if (strs.length == 1) {
-            return strs[0];
-        }
-        int minLen = -1;
-        for(String str: strs) {
-            if(minLen < 0 || str.length() < minLen) {
-                minLen = str.length();
+        public String longestCommonPrefix(String[] strs) {
+            if (strs == null || strs.length == 0) {
+                return "";
+            } else if (strs.length == 1) {
+                return strs[0];
             }
-        }
-        String target = strs[0];
-        int r = -1;
-        boolean allEqual = false;
-        out:
-        for(int i = 0; i < minLen; i++) {
-            for(int j = 1; j < strs.length; j++) {
-                if(strs[j].charAt(i) != target.charAt(i)) {
-                    break out;
+            int minLen = -1;
+            for (String str : strs) {
+                if (minLen < 0 || str.length() < minLen) {
+                    minLen = str.length();
                 }
-                r = i;
             }
+            String target = strs[0];
+            int r = -1;
+            out:
+            for (int i = 0; i < minLen; i++) {
+                int j = 1;
+                for (; j < strs.length; j++) {
+                    if (strs[j].charAt(i) != target.charAt(i)) {
+                        break out;
+                    }
+                }
+                if (j == strs.length) {
+                    r = i;
+                }
+            }
+            if (r > -1) {
+                return target.substring(0, r + 1);
+            }
+            return "";
         }
-        if(r > -1) {
-            return target.substring(0, r + 1);
-        }
-        return "";
-    }
     }
 
     public static void run() {
