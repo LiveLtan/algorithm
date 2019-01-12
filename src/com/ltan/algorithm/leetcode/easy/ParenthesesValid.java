@@ -38,22 +38,30 @@ import java.util.HashMap;
 public class ParenthesesValid {
     static class Solution {
         public boolean isValid(String s) {
-            if(s.length() == 0) {
+            if (s.length() == 0 || s.trim().length() == 0) {
                 return true;
             }
-            HashMap<Character, Character> operMap = new HashMap<>();
-            operMap.put(')', '(');
-            operMap.put(']', '[');
-            operMap.put('}', '{');
-            char last = s.charAt(0);
-            for(int i = 1; i < s.length(); i++) {
-                char c = s.charAt(i);
-                if(last != operMap.get(c)) {
-                    return false;
-                }
-                last = s.charAt(i);
+            if (s.length() < 2) {
+                return false;
             }
-            return true;
+            HashMap<Character, Character> opMap = new HashMap<>();
+            opMap.put(')', '(');
+            opMap.put(']', '[');
+            opMap.put('}', '{');
+            StringBuilder sb = new StringBuilder();
+            for (char c : s.toCharArray()) {
+                int last = sb.length() - 1;
+                if (!opMap.containsKey(c)
+                        || last < 0
+                        || sb.charAt(last) != opMap.get(c)) {
+                    sb.append(c);
+                    continue;
+                }
+                if (sb.charAt(last) == opMap.get(c)) {
+                    sb.deleteCharAt(last);
+                }
+            }
+            return sb.length() == 0;
         }
     }
 
@@ -61,5 +69,10 @@ public class ParenthesesValid {
         Solution s = new Solution();
         System.out.println(s.isValid("()"));
         System.out.println(s.isValid("()[]"));
+        System.out.println(s.isValid("()[]{}"));
+        System.out.println(s.isValid("([)]"));
+        System.out.println(s.isValid("([){}]"));
+        System.out.println(s.isValid("([]{[}])"));
+        System.out.println(s.isValid("  "));
     }
 }
