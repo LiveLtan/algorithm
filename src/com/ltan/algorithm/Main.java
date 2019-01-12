@@ -18,7 +18,8 @@ public class Main {
         //PalindromeInteger.run(); /* leetcode 9 */
         //RomanToInteger.run(); /* leetcode 13 */
         //LongestCommonPrefix.run(); /* leetcode 14 */
-        ParenthesesValid.run(); /* leetcode 20 */
+        //ParenthesesValid.run(); /* leetcode 20 */
+        MergeSortedList.run(); /* leetcode 20 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
