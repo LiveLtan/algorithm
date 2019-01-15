@@ -19,7 +19,8 @@ public class Main {
         //RomanToInteger.run(); /* leetcode 13 */
         //LongestCommonPrefix.run(); /* leetcode 14 */
         //ParenthesesValid.run(); /* leetcode 20 */
-        MergeSortedList.run(); /* leetcode 20 */
+        //MergeSortedList.run(); /* leetcode 20 */
+        ArrayDuplicatesRemove.run(); /* leetcode 26 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
