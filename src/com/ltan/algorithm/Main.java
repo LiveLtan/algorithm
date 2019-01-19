@@ -21,7 +21,8 @@ public class Main {
         //ParenthesesValid.run(); /* leetcode 20 */
         //MergeSortedList.run(); /* leetcode 20 */
         //ArrayDuplicatesRemove.run(); /* leetcode 26 */
-        RemoveArrayElement.run(); /* leetcode 27 */
+        //RemoveArrayElement.run(); /* leetcode 27 */
+        ImplementStr.run(); /* leetcode 28 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
