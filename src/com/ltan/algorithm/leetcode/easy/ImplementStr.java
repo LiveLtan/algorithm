@@ -2,6 +2,7 @@ package com.ltan.algorithm.leetcode.easy;
 
 /**
  * Details: from leetcode 28
+ * see leetcode 214 (Hard)
  * <p>
  * Maybe you should see the KMP Algorithm.
  * <p>

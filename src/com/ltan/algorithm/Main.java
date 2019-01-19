@@ -22,7 +22,8 @@ public class Main {
         //MergeSortedList.run(); /* leetcode 20 */
         //ArrayDuplicatesRemove.run(); /* leetcode 26 */
         //RemoveArrayElement.run(); /* leetcode 27 */
-        ImplementStr.run(); /* leetcode 28 */
+        //ImplementStr.run(); /* leetcode 28 */
+        SearchInsert.run(); /* leetcode 35 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
