@@ -20,7 +20,8 @@ public class Main {
         //LongestCommonPrefix.run(); /* leetcode 14 */
         //ParenthesesValid.run(); /* leetcode 20 */
         //MergeSortedList.run(); /* leetcode 20 */
-        ArrayDuplicatesRemove.run(); /* leetcode 26 */
+        //ArrayDuplicatesRemove.run(); /* leetcode 26 */
+        RemoveArrayElement.run(); /* leetcode 27 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
