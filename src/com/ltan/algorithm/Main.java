@@ -24,7 +24,8 @@ public class Main {
         //RemoveArrayElement.run(); /* leetcode 27 */
         //ImplementStr.run(); /* leetcode 28 */
         //SearchInsert.run(); /* leetcode 35 */
-        FirstBadVersion.run(); /* leetcode 278 */
+        //FirstBadVersion.run(); /* leetcode 278 */
+        FirstLastSearch.run(); /* leetcode 34 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
