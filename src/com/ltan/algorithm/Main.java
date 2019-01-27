@@ -29,6 +29,7 @@ public class Main {
         //CountAndSay.run(); /* leetcode 38 */
         //MaximumSubArray.run(); /* leetcode 53 */
         PlusOne.run(); /* leetcode 66 */
+        LastWordLen.run(); /* leetcode 58 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
