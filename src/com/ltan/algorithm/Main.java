@@ -18,7 +18,16 @@ public class Main {
         //PalindromeInteger.run(); /* leetcode 9 */
         //RomanToInteger.run(); /* leetcode 13 */
         //LongestCommonPrefix.run(); /* leetcode 14 */
-        ParenthesesValid.run(); /* leetcode 20 */
+        //ParenthesesValid.run(); /* leetcode 20 */
+        //MergeSortedList.run(); /* leetcode 20 */
+        //ArrayDuplicatesRemove.run(); /* leetcode 26 */
+        //RemoveArrayElement.run(); /* leetcode 27 */
+        //ImplementStr.run(); /* leetcode 28 */
+        //SearchInsert.run(); /* leetcode 35 */
+        //FirstBadVersion.run(); /* leetcode 278 */
+        //FirstLastSearch.run(); /* leetcode 34 */
+        //CountAndSay.run(); /* leetcode 38 */
+        MaximumSubArray.run(); /* leetcode 53 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
