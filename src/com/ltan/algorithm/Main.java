@@ -26,7 +26,8 @@ public class Main {
         //SearchInsert.run(); /* leetcode 35 */
         //FirstBadVersion.run(); /* leetcode 278 */
         //FirstLastSearch.run(); /* leetcode 34 */
-        CountAndSay.run(); /* leetcode 38 */
+        //CountAndSay.run(); /* leetcode 38 */
+        MaximumSubArray.run(); /* leetcode 53 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
