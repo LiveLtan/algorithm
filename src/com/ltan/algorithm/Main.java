@@ -27,7 +27,8 @@ public class Main {
         //FirstBadVersion.run(); /* leetcode 278 */
         //FirstLastSearch.run(); /* leetcode 34 */
         //CountAndSay.run(); /* leetcode 38 */
-        MaximumSubArray.run(); /* leetcode 53 */
+        //MaximumSubArray.run(); /* leetcode 53 */
+        PlusOne.run(); /* leetcode 66 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
