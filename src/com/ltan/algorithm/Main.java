@@ -2,6 +2,7 @@ package com.ltan.algorithm;
 
 import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.*;
+import com.ltan.algorithm.leetcode.medium.MultiplyStrings;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -28,7 +29,11 @@ public class Main {
         //FirstLastSearch.run(); /* leetcode 34 */
         //CountAndSay.run(); /* leetcode 38 */
         //MaximumSubArray.run(); /* leetcode 53 */
-        PlusOne.run(); /* leetcode 66 */
+//        PlusOne.run(); /* leetcode 66 */
+//        LastWordLen.run(); /* leetcode 58 */
+
+        // medium
+        MultiplyStrings.run(); /* leetcode 43 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
