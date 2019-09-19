@@ -28,7 +28,7 @@ public class AlgorithmMoveZeros {
                 continue;
             }
             // let the two index swap, unnecessary work if all number is non-zero
-            swap(nums, flag++, i);
+            Utils.swap(nums, flag++, i);
         }
     }
 
@@ -52,7 +52,7 @@ public class AlgorithmMoveZeros {
                 flag++;
                 continue;
             }
-            swap(nums, flag++, i);
+            Utils.swap(nums, flag++, i);
         }
     }
 
@@ -83,21 +83,6 @@ public class AlgorithmMoveZeros {
             nums[flag++] = nums[i];
             nums[i] = 0;
         }
-    }
-
-    /**
-     * If swipe, call this, java do not have swap API
-     * @param nums target nums
-     * @param index1 index1
-     * @param index2 index2
-     */
-    private void swap(int[] nums, int index1, int index2) {
-        if(index1 < 0 || (index1 > nums.length - 1) || index2 < 0 || (index2 > nums.length - 1)) {
-            return;
-        }
-        int tmp = nums[index1];
-        nums[index1] = nums[index2];
-        nums[index2] = tmp;
     }
 
 }
