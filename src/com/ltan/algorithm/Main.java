@@ -2,7 +2,7 @@ package com.ltan.algorithm;
 
 import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.*;
-import com.ltan.algorithm.leetcode.medium.MultiplyStrings;
+import com.ltan.algorithm.offer.Fibonacci;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -33,7 +33,7 @@ public class Main {
 //        LastWordLen.run(); /* leetcode 58 */
 
         // medium
-        MultiplyStrings.run(); /* leetcode 43 */
+        // MultiplyStrings.run(); /* leetcode 43 */
 
         //testMoveZeros(); /* leetcode 283 */
         //testRemoveElements(); /* leetcode 27 */
@@ -44,6 +44,9 @@ public class Main {
         //testQuickSort();
         //testSelectionSort();
         //testBubbleSort();
+
+        // For-offer
+        Fibonacci.run();
     }
 
     private static void testTwoSum() {
