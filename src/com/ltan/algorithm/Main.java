@@ -2,6 +2,7 @@ package com.ltan.algorithm;
 
 import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.*;
+import com.ltan.algorithm.offer.BstVerify;
 import com.ltan.algorithm.offer.Fibonacci;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
@@ -46,7 +47,8 @@ public class Main {
         //testBubbleSort();
 
         // For-offer
-        Fibonacci.run();
+        // Fibonacci.run();
+        BstVerify.run();
     }
 
     private static void testTwoSum() {

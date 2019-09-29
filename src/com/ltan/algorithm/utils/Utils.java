@@ -73,6 +73,7 @@ public class Utils {
         if(elements == null || elements.length() == 0) {
             return null;
         }
+        elements = elements.replaceAll("\\s+", "");
         int firstIndex = elements.indexOf('[');
         int lastIndex = elements.indexOf(']');
 
