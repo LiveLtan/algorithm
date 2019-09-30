@@ -85,4 +85,31 @@ public class Utils {
         }
         return retNums;
     }
+
+    // tree node
+    public static void printTreePre(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        System.out.print(node.val + ",");
+        if (node.left != null) {
+            printTreePre(node.left);
+        }
+        if (node.right != null) {
+            printTreePre(node.right);
+        }
+    }
+
+    public static void printTreeIn(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        if (node.left != null) {
+            printTreeIn(node.left);
+        }
+        System.out.print(node.val + ",");
+        if (node.right != null) {
+            printTreeIn(node.right);
+        }
+    }
 }
