@@ -50,7 +50,10 @@ public class Main {
         // BstVerify.run();
         // SpaceReplace.run();
         // LinkListReverse.run();
-        TreeRebuildByOrder.run();
+        // TreeRebuildByOrder.run();
+        // StackToQueue.run();
+        // ArrayMinValue.run();
+        JumpFloor.run();
     }
 
     private static void testTwoSum() {
