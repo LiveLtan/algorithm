@@ -53,7 +53,8 @@ public class Main {
         // TreeRebuildByOrder.run();
         // StackToQueue.run();
         // ArrayMinValue.run();
-        JumpFloor.run();
+        // JumpFloor.run();
+        NumberOfInt.run();
     }
 
     private static void testTwoSum() {
