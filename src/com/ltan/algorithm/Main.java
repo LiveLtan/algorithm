@@ -54,7 +54,9 @@ public class Main {
         // StackToQueue.run();
         // ArrayMinValue.run();
         // JumpFloor.run();
-        NumberOfInt.run();
+        // NumberOfInt.run();
+        // ArrayReOrder.run();
+        LinkLastK.run();
     }
 
     private static void testTwoSum() {

@@ -112,4 +112,16 @@ public class Utils {
             printTreeIn(node.right);
         }
     }
+
+    // link list
+    public static ListNode generateList(int n) {
+        ListNode head = new ListNode(1);
+        ListNode p = head, q;
+        for (int i = 1; i < n; i++) {
+            q = new ListNode(i + 1);
+            p.next = q;
+            p = q;
+        }
+        return head;
+    }
 }
