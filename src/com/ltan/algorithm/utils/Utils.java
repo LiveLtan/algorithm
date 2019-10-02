@@ -124,4 +124,12 @@ public class Utils {
         }
         return head;
     }
+
+    public static void printListNode(ListNode head) {
+        System.out.print("nodes:");
+        for (; head != null; head = head.next) {
+            System.out.print(head.val + ",");
+        }
+        System.out.println();
+    }
 }

@@ -56,7 +56,8 @@ public class Main {
         // JumpFloor.run();
         // NumberOfInt.run();
         // ArrayReOrder.run();
-        LinkLastK.run();
+        // LinkLastK.run();
+        ReverseLink.run();
     }
 
     private static void testTwoSum() {
