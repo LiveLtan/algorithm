@@ -1,5 +1,7 @@
 package com.ltan.algorithm.utils;
 
+import java.util.LinkedList;
+
 /**
  * Detail: public utils for algorithm
  *
@@ -87,6 +89,29 @@ public class Utils {
     }
 
     // tree node
+    public static TreeNode generateTreeNode(int[] nums) {
+        return generateTreeNode(nums, 0);
+    }
+    public static TreeNode generateTreeNode(int[] nums, int offset) {
+        LinkedList<TreeNode> nodes = new LinkedList<>();
+        for (int i = 0; i < nums.length; i++) {
+            TreeNode node = new TreeNode(nums[i] + offset);
+            nodes.add(node);
+        }
+        TreeNode root = nodes.get(0);
+        for (int l = 0; l < nums.length / 2 - 1; l++) {
+            nodes.get(l).left = nodes.get(l * 2 + 1);
+            nodes.get(l).right = nodes.get(l * 2 + 2);
+        }
+        int lastPIndex = nums.length / 2 - 1;
+        nodes.get(lastPIndex).left = nodes.get(lastPIndex * 2 + 1);
+        // if not even
+        if ((nums.length & 0x1) == 1) {
+            nodes.get(lastPIndex).right = nodes.get(lastPIndex * 2 + 2);
+        }
+        return root;
+    }
+
     public static void printTreePre(TreeNode node) {
         if (node == null) {
             return;
@@ -142,5 +167,31 @@ public class Utils {
             System.out.print(head.val + ",");
         }
         System.out.println();
+    }
+
+    // for int[][]
+    public static int[][] generateMatrix(int[] nums, int row, int column) {
+        if (nums == null || nums.length < (row * column)) {
+            throw new IllegalArgumentException("nums length must twice of vector " + (row * column) + " but " + nums.length);
+        }
+        int[][] matrix = new int[row][column];
+        int k = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                matrix[i][j] = nums[k++];
+            }
+        }
+        return matrix;
+    }
+
+    public static void printMatrix(int[][] matrix) {
+        int row = matrix.length;
+        int column = matrix[0].length;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print(matrix[i][j] + ",");
+            }
+            System.out.println();
+        }
     }
 }

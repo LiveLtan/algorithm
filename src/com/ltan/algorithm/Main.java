@@ -58,7 +58,10 @@ public class Main {
         // ArrayReOrder.run();
         // LinkLastK.run();
         // ReverseLink.run();
-        ListMerge.run();
+        // ListMerge.run();
+        // SubTree.run();
+        // TreeMirror.run();
+        MatrixPrint.run();
     }
 
     private static void testTwoSum() {
