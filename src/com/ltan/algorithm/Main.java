@@ -57,7 +57,8 @@ public class Main {
         // NumberOfInt.run();
         // ArrayReOrder.run();
         // LinkLastK.run();
-        ReverseLink.run();
+        // ReverseLink.run();
+        ListMerge.run();
     }
 
     private static void testTwoSum() {

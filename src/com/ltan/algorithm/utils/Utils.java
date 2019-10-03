@@ -125,6 +125,17 @@ public class Utils {
         return head;
     }
 
+    public static ListNode generateList(int n, int start) {
+        ListNode head = new ListNode(start);
+        ListNode p = head, q;
+        for (int i = 1; i < n; i++) {
+            q = new ListNode(i + start);
+            p.next = q;
+            p = q;
+        }
+        return head;
+    }
+
     public static void printListNode(ListNode head) {
         System.out.print("nodes:");
         for (; head != null; head = head.next) {
