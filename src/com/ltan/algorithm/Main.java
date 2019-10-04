@@ -64,7 +64,9 @@ public class Main {
         // MatrixPrint.run();
         // MinStack.run();
         // StackPopSequence.run();
-        TreeBreadth.run();
+        // TreeBreadth.run();
+        // TreePostOrder.run();
+        TreePath.run();
     }
 
     private static void testTwoSum() {
