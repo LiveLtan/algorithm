@@ -66,7 +66,9 @@ public class Main {
         // StackPopSequence.run();
         // TreeBreadth.run();
         // TreePostOrder.run();
-        TreePath.run();
+        // TreePath.run();
+        // RandomLinkList.run();
+        BstConvert.run();
     }
 
     private static void testTwoSum() {
