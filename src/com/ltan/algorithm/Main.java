@@ -68,7 +68,11 @@ public class Main {
         // TreePostOrder.run();
         // TreePath.run();
         // RandomLinkList.run();
-        BstConvert.run();
+        // BstConvert.run();
+        // StringPermutation.run();
+        // ArrayHalfNumber.run();
+        // LeastKNumbers.run();
+        SubArrayGreatestSum.run();
     }
 
     private static void testTwoSum() {
