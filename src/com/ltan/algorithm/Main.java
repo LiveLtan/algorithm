@@ -3,6 +3,7 @@ package com.ltan.algorithm;
 import com.ltan.algorithm.interview.DeleteEqualsNumber;
 import com.ltan.algorithm.leetcode.*;
 import com.ltan.algorithm.leetcode.easy.*;
+import com.ltan.algorithm.offer.*;
 import com.ltan.algorithm.practice.AlgorithmBubbleSort;
 import com.ltan.algorithm.practice.AlgorithmQuickSort;
 import com.ltan.algorithm.practice.AlgorithmSelectionSort;
@@ -73,7 +74,9 @@ public class Main {
         // ArrayHalfNumber.run();
         // LeastKNumbers.run();
         // SubArrayGreatestSum.run();
-        DeleteEqualsNumber.run();
+        // DeleteEqualsNumber.run();
+        OnePlusToN.run();
+        SumWithBit.run();
     }
 
     private static void testTwoSum() {
