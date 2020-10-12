@@ -99,6 +99,9 @@ public class Utils {
             nodes.add(node);
         }
         TreeNode root = nodes.get(0);
+        if (nodes.size() == 1) {
+            return root;
+        }
         for (int l = 0; l < nums.length / 2 - 1; l++) {
             nodes.get(l).left = nodes.get(l * 2 + 1);
             nodes.get(l).right = nodes.get(l * 2 + 2);
@@ -110,6 +113,28 @@ public class Utils {
             nodes.get(lastPIndex).right = nodes.get(lastPIndex * 2 + 2);
         }
         return root;
+    }
+
+    public static void checkTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        if (root.val == -1) {
+            root.left = null;
+            root.right = null;
+        }
+        if (root.left != null && root.left.val == -1) {
+            root.left = null;
+        } else {
+
+            checkTree(root.left);
+        }
+        if (root.right != null && root.right.val == -1) {
+            root.right = null;
+        } else {
+
+            checkTree(root.right);
+        }
     }
 
     public static void printTreePre(TreeNode node) {
