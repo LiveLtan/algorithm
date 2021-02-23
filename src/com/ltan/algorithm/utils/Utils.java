@@ -174,6 +174,16 @@ public class Utils {
         }
         return head;
     }
+    public static ListNode generateList(int[] nums) {
+        ListNode head = new ListNode(nums[0]);
+        ListNode p = head, q;
+        for (int i = 1; i < nums.length; i++) {
+            q = new ListNode(nums[i]);
+            p.next = q;
+            p = q;
+        }
+        return head;
+    }
 
     public static ListNode generateList(int n, int start) {
         ListNode head = new ListNode(start);
